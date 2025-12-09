@@ -1,0 +1,212 @@
+/* src/components/QuestionCard.css */
+
+.question-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid;
+  animation: slideUp 0.6s ease-out;
+}
+
+.question-card.correct {
+  border-top-width: 10px;
+}
+
+.question-card.wrong {
+  border-top-width: 10px;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.question-type {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.type-icon {
+  font-size: 36px;
+}
+
+.type-text {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.difficulty-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.question-text {
+  margin-bottom: 30px;
+}
+
+.question-text h2 {
+  font-size: 26px;
+  color: #1f2937;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #f9fafb;
+  border: 3px solid #e5e7eb;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  text-align: left;
+}
+
+.option-button:hover:not(:disabled) {
+  background: #f3f4f6;
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:disabled {
+  cursor: not-allowed;
+}
+
+.option-letter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.option-text {
+  color: #374151;
+  font-weight: 500;
+  flex: 1;
+}
+
+.correct-option {
+  background: #dcfce7 !important;
+  border-color: #22c55e !important;
+  animation: correctPulse 0.5s ease;
+}
+
+.wrong-option {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  animation: shake 0.5s ease;
+}
+
+.show-correct {
+  background: #dcfce7 !important;
+  border-color: #22c55e !important;
+}
+
+@keyframes correctPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+  animation: slideUp 0.5s ease;
+}
+
+.feedback-message.correct {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.feedback-message.wrong {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.feedback-icon {
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  .question-card {
+    padding: 28px;
+  }
+
+  .question-text h2 {
+    font-size: 22px;
+  }
+
+  .option-button {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .option-letter {
+    width: 36px;
+    height: 36px;
+  }
+}
