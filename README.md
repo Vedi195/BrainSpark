@@ -1,8 +1,3 @@
-Here is a **simple, clean, and attractive README** for your React game project **BrainSpark**.
-You can copy–paste this directly into your GitHub repository.
-
----
-
 # 🧠 BrainSpark
 
 A fun and interactive brain-training game built using **React**.
