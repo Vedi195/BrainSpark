@@ -101,4 +101,5 @@ If you’d like to improve the game, feel free to fork and submit changes.
 ## 📧 Contact
 
 Developed by **Vedika**
+📧 vedikavakhare@gmail.com
 If you want to connect or give feedback, feel free to reach out!
